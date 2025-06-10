@@ -104,3 +104,9 @@ variable "instance_image" {
   type        = string
   default     = "projects/debian-cloud/global/images/family/debian-11"
 }
+
+variable "database_name" {
+  description = "name of the database"
+  type = string
+  default = "cepf-db"
+}
