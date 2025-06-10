@@ -100,9 +100,9 @@ variable "static_ip_name" {
 }
 
 variable "instance_image" {
-  description = "The image to use for the instances, e.g., 'debian-cloud/debian-11'."
+  description = "The image to use for the instances, e.g., 'debian-cloud/debian-12'."
   type        = string
-  default     = "projects/debian-cloud/global/images/family/debian-11"
+  default     = "projects/debian-cloud/global/images/family/debian-12"
 }
 
 variable "database_name" {
