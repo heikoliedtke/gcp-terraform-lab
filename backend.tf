@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket  = "your-gcs-bucket-name" # Replace with your GCS bucket name
-    prefix  = "path/to/your/terraform.tfstate"  # Optional: path within the bucket
+    bucket  = "qwiklabs-gcp-04-e54063a363ec-bucket-tfstate" # Replace with your GCS bucket name
+  
   }
   required_providers {
     google = {
