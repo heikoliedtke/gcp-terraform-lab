@@ -16,7 +16,7 @@ nat_gateway_name = "natgw01"
 # Compute Instance Configuration
 instance_template_name = "app-instance-template"
 machine_type = "e2-medium"
-mig_name = "app-regional-mig"
+mig_name = "cepf-lb-http-group1-mig"
 mig_target_size = 2
 mig_max_instances = 4
 cpu_target_utilization = 0.6

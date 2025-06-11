@@ -80,10 +80,10 @@ resource "google_compute_region_instance_group_manager" "app_mig" {
     port = 80
   }
 
-  auto_healing_policies {
-    health_check      = google_compute_health_check.http_health_check.id
-    initial_delay_sec = 300 # Adjust as needed for your startup script
-  }
+  #auto_healing_policies {
+  #  health_check      = google_compute_health_check.http_health_check.id
+  #  initial_delay_sec = 300 # Adjust as needed for your startup script
+  #}
 }
 
 resource "google_compute_region_autoscaler" "app_mig_autoscaler" {

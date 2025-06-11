@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = var.backend_bucket # Replace with your GCS bucket name
+    bucket  = "qwiklabs-gcp-03-394040c70825-bucket-tfstate" # Replace with your GCS bucket name
   
   }
   required_providers {
