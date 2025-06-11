@@ -130,6 +130,11 @@ variable "database_name" {
   
 }
 
+variable "database_instance" {
+  description = "name of the CloudSQL instance"
+  type = string
+}
+
 variable "backend_bucket" {
   description = "the name of the GCS bucket for the state"
   type = string

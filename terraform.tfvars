@@ -1,8 +1,8 @@
 # Example terraform.tfvars file
 
 # General Configuration
-project_id = "your-gcp-project-id"
-region     = "us-central1"
+project_id = "qwiklabs-gcp-02-a158dff3e021"
+region     = "us-west1"
 
 # Network Configuration
 network_name  = "vpc01"
@@ -21,13 +21,14 @@ mig_target_size = 2
 mig_max_instances = 4
 cpu_target_utilization = 0.6
 http_health_check_name = "http-basic-health-check"
-backend_service_name = "app-backend-service"
+backend_service_name = "cepf-lb-http-backend-default" # Backend Nam
 url_map_name = "web-lb-url-map"
-global_forwarding_rule_name = "http-content-rule"
+global_forwarding_rule_name = "cepf-lb-http" # Frontend Forwarding Rule Name
 static_ip_name = "lb-static-ipv4-address"
 target_http_proxy_name = "http-lb-target-proxy"
 instance_image = "projects/debian-cloud/global/images/family/debian-12"
 database_name = "cepf-db"
+database_instance = "cepf-instance"
 backend_bucket = "tbd"
 
 

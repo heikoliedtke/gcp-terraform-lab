@@ -36,7 +36,7 @@ resource "google_compute_instance_template" "app_template" {
     export DB_PASS='postgres'
     export DB_NAME='cepf-db'
     CONNECTION_NAME=$(gcloud sql instances describe cepf-instance --format="value(connectionName)")
-    nohup ./cloud-sql-proxy ${CONNECTION_NAME} &
+    nohup ./cloud-sql-proxy $${CONNECTION_NAME} &
     python3 -m venv env
     source env/bin/activate
     pip install -r requirements.txt
@@ -60,6 +60,7 @@ resource "google_compute_instance_template" "app_template" {
   lifecycle {
     create_before_destroy = true
   }
+  depends_on = [ google_sql_database_instance.main ]
 }
 
 # Regional Managed Instance Group
