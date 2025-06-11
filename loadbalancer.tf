@@ -31,7 +31,7 @@ resource "google_compute_backend_service" "app_backend_service" {
     capacity_scaler = 1.0
   }
 
-  #health_checks = [google_compute_health_check.http_health_check.id]
+  health_checks = [google_compute_health_check.http_health_check.id]
   
 }
 
