@@ -1,8 +1,8 @@
 # Example terraform.tfvars file
 
 # General Configuration
-project_id = "qwiklabs-gcp-02-a158dff3e021"
-region     = "us-west1"
+project_id = "qwiklabs-gcp-03-394040c70825"
+region     = "us-central1"
 
 # Network Configuration
 network_name  = "vpc01"
