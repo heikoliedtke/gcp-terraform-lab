@@ -11,10 +11,10 @@ resource "google_compute_instance_template" "app_template" {
 
   network_interface {
     subnetwork = google_compute_subnetwork.app_subnet.self_link
-    access_config {
+    # access_config {
       // Ephemeral public IP, useful for initial setup like package downloads
       // Not strictly needed if you have a NAT gateway
-    }
+    #}
   }
 
   scheduling {
@@ -60,7 +60,7 @@ resource "google_compute_instance_template" "app_template" {
   lifecycle {
     create_before_destroy = true
   }
-  depends_on = [ google_sql_database_instance.main ]
+  depends_on = [ google_sql_database_instance.cepf_instance ]
 }
 
 # Regional Managed Instance Group
